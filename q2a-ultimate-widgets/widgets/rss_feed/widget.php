@@ -1,6 +1,7 @@
 <?php
 
 class rss_feed {
+	public $allow_cache = true;
 	
 	function allow_template($template)
 	{
@@ -53,7 +54,7 @@ class rss_feed {
 				else
 					$thumbnail = '';
 			}
-			echo "<li class=\"uw-feed-item\"><a href='$entry->link' $rel title='$entry->title'>" . $thumbnail . '<span class="uw-feed-link-title">' . $entry->title . "</span></a></li>";  
+			echo '<li class="uw-feed-link-body"><a href="' . $entry->link . '"" $rel title="' . $entry->title . '"" class="uw-feed-link">' . $thumbnail . '<span class="uw-feed-title">' . $entry->title . '</span></a></li>';
 			$i++;
 			if ($i>=$count)
 				break;

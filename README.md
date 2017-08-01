@@ -8,15 +8,9 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 
 1. [Download Plugin](https://github.com/q2a-projects/Q2A-Ultimate-Widgets/archive/master.zip "Download Zip File") and extract "q2a-ultimate-widgets" directory.
 2. upload it to your Q2A site's plugin directory (e.g. `qa-plugin/q2a-ultimate-widgets`).
-3. In Q2A log in as administrator and go to **Admin > Layout** and add new widgets available in widget's section.
+3. In Q2A, login as administrator and go to **Admin > Layout** and add new widgets available in widget's section.
 
-## To Do
-### Users Widgets
-- [ ] Todays Top Users
-- [ ] Week's Top Users
-- [ ] Month's Top Users
-- [ ] All Time Top Users
-- [ ] New Users
+## Available Widgets
 
 ### Question List
 - [x] Activity
@@ -26,19 +20,20 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] Most Viewed
 - [x] Most Voted
 - [x] Random Post
-- [ ] Tab: combine other list in tabs
-- [ ] Post Carousel 
-- [ ] Category Posts: Questions from opened post's category
+- [x] Questions from people I follow
+- [x] Tab: combine other list in tabs
+- [x] Category Posts: Questions from opened post's category
+- [x] Reminder to choose best answer for user's questions with enought points in answers or enough number of answers
 
 ### Login
-- [x] WordPress Login
-- [ ] WordPress SignUp(Tab with login form)
-- [x] Q2A Login
-- [ ] Q2A SignUp Tabs
+- [x] WordPress Login Form
+- [x] Q2A Login Form
 
 ### Other
-- [ ] Ask form
-- [ ] Q2A Stats
+- [x] Ask form
+- [x] Search form
+- [x] Q2A Stats(General Site Stat)
+- [x] Q2A Stats(Post Activity)
 - [x] RSS Feed
 - [x] Trending Topics
 - [x] PHP Code Widget
@@ -46,31 +41,41 @@ Widget Pack for Question2Answer(Question & Answer community platform) is **In BE
 - [x] MailChimp Widget
 
 ### Static Content
-- [ ] Text & HTML
-- [ ] Image Slider
-- [ ] Image(optional link)
-- [ ] Button(call to action or link)
-- [ ] Modal Pop Up
-- [ ] Video(Youtube, Vimeo, ...)
-- [ ] Alert widgets
-- [ ] Social Media Links
-- [ ] Random Content: Randomly open one of the added content from list of texts
+- [x] Text & HTML
+- [x] Image(optional link)
+- [x] Button for Modal Pop Up
+- [x] Video(Youtube, Vimeo)
+- [x] Soundcloud Widget
+- [x] Alert widgets
+- [x] Social Media Links
+- [x] Random Content: Randomly open one of the added content from list of texts
 
 ### Features:
-- [ ] Cache
-- [ ] Styling
+- [x] Cache
+- [x] Styling
 - [x] Individual Widget Options
-- [ ] Conditional Widgets
+- [x] Conditional Widgets
 
-### Do Later(Lowwer Priority):
+### Filters(Conditional Widgets)
+- [x] Visitors/Users
+- [x] Moderators,Admins/Users
+- [x] Mobile/Desktop
+- [x] User Points 
+
+### Do Later(Lower Priority):
 - [ ] Social: Twitter, Google+, FaceBook
 - [ ] Google Plus Badge Widget
 - [ ] Google Maps
 - [ ] Google Analytics Dashboard
 - [ ] Github
 - [ ] Flickr Stream
-- [ ] Soundcloud Widget
 - [ ] Patreon Button & Widgets
+- [ ] Posts from specific category
+- [ ] Image Slider
+- [ ] Post Carousel 
+- [ ] WordPress SignUp(Tab with login form)
+- [ ] Q2A SignUp Tabs
+- [ ] Merge widget's css files into a single file and use it instead of seperate files
 
 ## Author
 

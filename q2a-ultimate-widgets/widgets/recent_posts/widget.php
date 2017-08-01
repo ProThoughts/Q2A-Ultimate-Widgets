@@ -1,6 +1,7 @@
 <?php
 
 class recent_posts {
+	public $allow_cache = true;
 	
 	function allow_template($template)
 	{
@@ -27,7 +28,7 @@ class recent_posts {
 
 		echo '<aside class="uw-recent-posts-widget">';
 		if($title)
-			echo '<H2 class="uw-recent-header">'. $title .'</H2>';
+			echo '<H2 class="uw-recent-posts-header">'. $title .'</H2>';
 
 		echo '<ul class="uw-recent-posts-list">';
 		
@@ -48,20 +49,19 @@ class recent_posts {
 				$doc = new DOMDocument();
 				@$doc->loadHTML($postinfo['content']);
 				$xpath = new DOMXPath($doc);
-				$src = $xpath->evaluate("string(//img/@src)");
+				$src = htmlspecialchars($xpath->evaluate("string(//img/@src)"));
 				
 				if ( empty($src) && !empty($default_thumbnail) )
 					$src = $default_thumbnail;
 				$thumb='';
 				if ( !empty($src) )
-					$thumb= '<div class="uw-recent-thumb"><a class="uw-recent-link-thumbnail" href="' . $questionlink . '"><img class="uw-recent-thumbnail" width="60" height="50" src="' . $src . '"></a></div>';
+					$thumb= '<img class="uw-recent-posts-thumbnail" width="60" height="50" src="' . $src . '">';
 			}
-			echo '<li>' . $thumb;
-			echo '<div class="uw-recent-link-body"><a class="uw-recent-link" href="' . $questionlink . '"><h4 class="uw-recent-link-header">' . $question['title'] . '</h4>';
-			echo '<span class="uw-recent-time">' . $when . '</span></a></div></li>';
+			echo '<li class="uw-recent-posts-link-body">';
+			echo '<a class="uw-recent-posts-link" href="' . $questionlink . '">';
+			echo $thumb . '<span class="uw-recent-posts-title">'. htmlspecialchars($question['title']) . '</span>';
+			echo '<span class="uw-recent-posts-time">' . $when . '</span></a></li>';
 		}		
 		echo '</ul></aside>';
-
-
 	}
 }

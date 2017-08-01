@@ -1,6 +1,7 @@
 <?php
 
 class recent_activity {
+	public $allow_cache = true;
 	
 	function allow_template($template)
 	{
@@ -54,17 +55,18 @@ class recent_activity {
 				$doc = new DOMDocument();
 				@$doc->loadHTML($postinfo['content']);
 				$xpath = new DOMXPath($doc);
-				$src = $xpath->evaluate("string(//img/@src)");
+				$src = htmlspecialchars($xpath->evaluate("string(//img/@src)"));
 				
 				if ( empty($src) && !empty($default_thumbnail) )
 					$src = $default_thumbnail;
 				$thumb='';
 				if ( !empty($src) )
-					$thumb= '<div class="uw-recent-thumb"><a class="uw-recent-activity-link-thumbnail" href="' . $questionlink . '"><img class="uw-recent-activity-thumbnail" width="60" height="50" src="' . $src . '"></a></div>';
+					$thumb= '<img class="uw-recent-activity-thumbnail" width="60" height="50" src="' . $src . '">';
 			}
-			echo '<li>' . $thumb;
-			echo '<div class="uw-recent-activity-link-body"><a class="uw-recent-activity-link" href="' . $questionlink . '"><h4 class="uw-recent-activity-link-header">' . $question['title'] . '</h4>';
-			echo '<span class="uw-recent-activity-time">' . $when . '</span></a></div></li>';
+			echo '<li class="uw-recent-activity-link-body">';
+			echo '<a class="uw-recent-activity-link" href="' . $questionlink . '">';
+			echo $thumb . '<span class="uw-recent-activity-title">'. htmlspecialchars($question['title']) . '</span>';
+			echo '<span class="uw-recent-activity-time">' . $when . '</span></a></li>';
 		}		
 		echo '</ul></aside>';
 

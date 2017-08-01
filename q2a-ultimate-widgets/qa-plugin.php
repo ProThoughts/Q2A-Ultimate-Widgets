@@ -33,9 +33,15 @@ qa_register_plugin_overrides('overrides.php');
 
 global $uw_widgets;
 $uw_widgets = array(
+    'tabbed_list' => 'Ultimate Widgets - Tabbed Question List',
+    'best_answer_reminder' => 'Ultimate Widgets - Reminder to choose best Answer',
+    'category_posts' => 'Ultimate Widgets - Category Posts',
+    'social_links' => 'Ultimate Widgets - Social Links',
+    'random_content' => 'Ultimate Widgets - Random Content',
+    'alert' => 'Ultimate Widgets - Alert Box',
 	'rss_feed' => 'Ultimate Widgets - RSS Feed',
     'recent_activity' => 'Ultimate Widgets - Recent Activity',
-	'recent_posts' => 'Ultimate Widgets - Recent Posts',
+	'recent_posts' => 'Ultimate Widgets - Recent Questions',
 	'hot_posts' => 'Ultimate Widgets - Hot Posts',
 	'most_answered_posts' => 'Ultimate Widgets - Most Answered Posts',
 	'most_viewed_posts' => 'Ultimate Widgets - Most Viewed Posts',
@@ -47,7 +53,18 @@ $uw_widgets = array(
     'php_exec' => 'Ultimate Widgets - PHP Code Runner',
     'accessibility' => 'Ultimate Widgets - Accessibility',
     'mailchimp' => 'Ultimate Widgets - MailChimp Subscription',
+    'ask_form' => 'Ultimate Widgets - Ask',
+    'search' => 'Ultimate Widgets - Search',
     'google_search' => 'Ultimate Widgets - Google Search',
+    'stat_chart' => 'Ultimate Widgets - Stat Charts',
+    'stat_chart_activity' => 'Ultimate Widgets - Post Activity Stat Chart',
+    'static_text' => 'Ultimate Widgets - Static Text',
+    'static_image' => 'Ultimate Widgets - Static Image',
+    'modal' => 'Ultimate Widgets - Modal Window',
+    'youtube' => 'Ultimate Widgets - Embed Youtube',
+    'vimeo' => 'Ultimate Widgets - Embed Vimeo',
+    'soundcloud' => 'Ultimate Widgets - Embed SoundCloud',
+    'favorited_user_questions' => 'Ultimate Widgets - Favorited Users Questions',
 );
 foreach ($uw_widgets as $key => $name) {
 	qa_register_plugin_module('widget', 'widgets/'.$key.'/widget.php', $key, $name);
